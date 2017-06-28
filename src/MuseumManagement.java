@@ -3,7 +3,7 @@ public class MuseumManagement {
 	
 	public static void main(String[] args){
 		String day;
-		Person p1 = new Person("이규필", 9, 2000, false);
+		Person p1 = new Person("이규필", 9, 10000, false);
 		Person p2 = new Person("김홍래", 19, 5000, false);
 		Person p3 = new Person("민명기", 23, 0, true);
 		Person p4 = new Person("박경찬", 7, 5000, false);
@@ -27,7 +27,7 @@ public class MuseumManagement {
 		catch(VisitorNumException n){
 			n.printStackTrace();
 		}
-		System.out.println(ma.getName(ma.getVisitors()) + " 입장 오늘 :" + ma.getVisitors() + "명, 현재 : " + ma.getPerson() + "명, 수입 : " + ma.getIncome() + "원");
+		System.out.println(ma.getName(ma.getVisitors()) + " 입장, 오늘 :" + ma.getVisitors() + "명, 현재 : " + ma.getPerson() + "명, 수입 : " + ma.getIncome() + "원");
 		try{
 			ma.enter(p2, p2.name);
 		}
@@ -234,6 +234,12 @@ public class MuseumManagement {
 		catch(VisitorNumException n){
 			n.printStackTrace();
 		}
+		try{
+			ma2.quit("이규필");
+		}
+		catch(VisitorNameException name){
+			name.printStackTrace();
+		}
 		System.out.println(ma2.getName(ma2.getVisitors()) + " 입장: 오늘 :" + ma2.getVisitors() + "명, 현재 : " + ma2.getPerson() + "명, 수입 : " + ma2.getIncome() + "원");
 		try{
 			ma2.enter(p10, p10.name);
@@ -256,10 +262,11 @@ public class MuseumManagement {
 		}
 		System.out.println(ma2.getName(ma2.getVisitors()) + " 입장: 오늘 :" + ma2.getVisitors() + "명, 현재 : " + ma2.getPerson() + "명, 수입 : " + ma2.getIncome() + "원");
 		try{
-			ma2.quit("이규필");
+			ma2.quit("박경찬");
 		}
 		catch(VisitorNameException name){
 			name.printStackTrace();
 		}
+		System.out.println(ma2.getName(ma2.getVisitors()) + " 입장: 오늘 :" + ma2.getVisitors() + "명, 현재 : " + ma2.getPerson() + "명, 수입 : " + ma2.getIncome() + "원");
 	}
 }

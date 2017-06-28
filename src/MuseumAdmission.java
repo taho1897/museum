@@ -1,9 +1,9 @@
 
-public class MuseumAdmission {
-	int visitors;
-	int person;
-	int income;
-	String today;
+public class MuseumAdmission {//박물관 출입 관련 처리 당담 MuseumAdmission class
+	int visitors;//방문자 수를 저장할 변수 선언
+	int person;//현재 박물관 입장객 수를 저장할 변수 선언
+	int income;//박물관 수입을 저장할 변수 선언
+	String today;//오늘 요일을 저정할 변수 선언
 	String[] nameList = new String[11];
 	MuseumAdmission(String whatDay) {
 		visitors = 0;
@@ -111,6 +111,7 @@ public class MuseumAdmission {
 			if(nameList[n] == visitorName){
 				System.out.println(visitorName + "퇴장");
 				person --;
+				visitors --;
 				break;
 			}
 			else if(n==10){
