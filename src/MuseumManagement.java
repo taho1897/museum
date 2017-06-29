@@ -129,13 +129,13 @@ public class MuseumManagement {
 		}
 		System.out.println(ma.getName(ma.getVisitors()) + " 입장: 오늘 :" + ma.getVisitors() + "명, 현재 : " + ma.getPerson() + "명, 수입 : " + ma.getIncome() + "원");
 		try{
-			ma.quit("야");
+			ma.exit("야");
 		}
 		catch(VisitorNameException name){
 			name.printStackTrace();
 		}
 		try{
-			ma.quit("이규필");
+			ma.exit("이규필");
 		}
 		catch(VisitorNameException name){
 			name.printStackTrace();
@@ -235,7 +235,7 @@ public class MuseumManagement {
 			n.printStackTrace();
 		}
 		try{
-			ma2.quit("이규필");
+			ma2.exit("이규필");
 		}
 		catch(VisitorNameException name){
 			name.printStackTrace();
@@ -262,7 +262,7 @@ public class MuseumManagement {
 		}
 		System.out.println(ma2.getName(ma2.getVisitors()) + " 입장: 오늘 :" + ma2.getVisitors() + "명, 현재 : " + ma2.getPerson() + "명, 수입 : " + ma2.getIncome() + "원");
 		try{
-			ma2.quit("박경찬");
+			ma2.exit("박경찬");
 		}
 		catch(VisitorNameException name){
 			name.printStackTrace();
